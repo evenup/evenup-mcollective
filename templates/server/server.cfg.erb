@@ -1,5 +1,8 @@
 # Managed by puppet - do not modify
 
+<% if @server_identity -%>
+identity = <%= @server_identity %>
+<% end -%>
 main_collective = mcollective
 collectives = mcollective
 libdir = /opt/puppetlabs/mcollective/plugins:/usr/libexec/mcollective
