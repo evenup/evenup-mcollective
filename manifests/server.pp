@@ -4,12 +4,13 @@
 #
 #
 class mcollective::server (
-  $stomp_host     = $::mcollective::stomp_host,
-  $stomp_user     = $::mcollective::stomp_user,
-  $stomp_password = $::mcollective::stomp_password,
-  $stomp_port     = $::mcollective::stomp_port,
-  $psk            = $::mcollective::psk,
-  $plugin_config  = $::mcollective::server_plugin_config,
+  $server_identity = $mcollective::server_identity,
+  $stomp_host      = $::mcollective::stomp_host,
+  $stomp_user      = $::mcollective::stomp_user,
+  $stomp_password  = $::mcollective::stomp_password,
+  $stomp_port      = $::mcollective::stomp_port,
+  $psk             = $::mcollective::psk,
+  $plugin_config   = $::mcollective::server_plugin_config,
 ) {
 
   file { '/etc/puppetlabs/mcollective/server.cfg':
