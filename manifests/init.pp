@@ -4,7 +4,7 @@
 #
 #
 class mcollective(
-  Optional[String]                             $identity             = undef,
+  Optional[String]                             $server_identity      = undef,
   String                                       $stomp_host           = 'localhost',
   String                                       $stomp_user           = 'mcollective',
   String                                       $stomp_password       = 'password',
